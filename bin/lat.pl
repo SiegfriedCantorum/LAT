@@ -37,6 +37,21 @@ open my $datei, '<', $input_datei or die "Datei '$input_datei' konnte nicht geö
 my @zeilen = <$datei>;
 close $datei;
 
+sub get_version{
+for my $z (@zeilen){
+
+if (substr($z, 3, 4) == 9212){
+    my $ldt_version = "LDT 2";
+    return $ldt_version;
+}elsif(substr($z, 3, 4) == 0001){
+    my $ldt_version = "LDT 3";
+    return $ldt_version;}
+    }
+}
+
+my $ldt_version = get_version;
+print "TEST: $ldt_version";
+
 print "\n----------------------------------------------------------------";
 print "\n------- Verarbeitung: $input_datei (Version DUMMY) -------\n";
 print "----------------------------------------------------------------\n\n";
