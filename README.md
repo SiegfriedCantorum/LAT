@@ -1,0 +1,1 @@
+LAT ist ein Terminal-Tool zur vereinfachten Ausgabe/Anzeige von Dateien im .ldt-Format.
