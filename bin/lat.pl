@@ -49,16 +49,15 @@ if (substr($z, 3, 4) == 9212){
     }
 }
 
-my $ldt_version = get_version;
-print "TEST: $ldt_version";
+my $ldt_version = &get_version;
+
 
 print "\n----------------------------------------------------------------";
-print "\n------- Verarbeitung: $input_datei (Version DUMMY) -------\n";
+print "\n----------- Verarbeitung: $input_datei ($ldt_version) -----------\n";
 print "----------------------------------------------------------------\n\n";
 
 my $feldname = "";
 my $zn = ""; #Zeilencounter
-print "TEST";
 my @obj_idents = qw(8001 8002 8003);          #Feldnummern von Objektidents zum Ausblenden (LDT3)
 
     foreach my $zeile (@zeilen){ #Iteriere durch jede zeile in @zeilen und teile sie auf 
