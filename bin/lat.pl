@@ -61,7 +61,7 @@ my @obj_idents = qw(8001 8002 8003);          #Feldnummern von Objektidents zum 
         $zn +=1;
         my $zeilennummer = "Z.$zn \t"; #definiere Zeilennummer
         my $bytecount = substr($zeile, 0, 3) . "\t";          #Bytecount
-            if (!$opt_bytecount){$bytecount = ""}             #Flag f. Ausgabe Bytecount
+        $bytecount = "";
         my $feldkennung = substr($zeile, 3, 4) . "\t";        #Feldname
         my $feldinhalt = substr($zeile, 7);                   #Feldinhalt
 
