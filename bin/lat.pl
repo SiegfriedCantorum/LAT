@@ -5,8 +5,8 @@
 use strict;
 use Getopt::Mixed 1.006, 'getOptions';
 use File::Find;
-use vars qw($opt_bytecount $opt_feld $opt_objektid $opt_verbose $opt_switch $opt_check $opt_help $opt_version $opt_dynamic);
-getOptions("bytecount b>bytecount feld f>feld objektid o>objektid verbose v>verbose switch w>switch check c>check help h>help version dynamic d>dynamic ");
+use vars qw($opt_feld $opt_objektid $opt_verbose $opt_check $opt_help);
+getOptions("bytecount b>bytecount feld f>feld objektid o>objektid verbose v>verbose check c>check help h>help");
 
 sub hilfe { #Ausgabe Hilfstext bei -h /--help
     print "\nVerwendung: lat [Optionen] Datei_1 [Datei_2 ...]\n\n";
@@ -16,8 +16,7 @@ sub hilfe { #Ausgabe Hilfstext bei -h /--help
     print "  -f, --feld            Ausgabe Feldbedeutung\n";
     print "  -h, --help            Zeige diese Hilfsmeldung\n";
     print "  -o, --objektid        Ausgabe Objekt-Identifier (in LDT3)\n";
-    print "  -v, --verbose         Verbose-Modus\n";
-    print "  -w, --switch          Wechsel der Referenz-LDT-Version auf LDT3 (Standard: LDT2)\n\n";
+    print "  -v, --verbose         Verbose-Modus\n\n";
     print "\n";  
 }
 if($opt_help){hilfe;exit(0)}
