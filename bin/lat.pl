@@ -35,15 +35,16 @@ my @zeilen = <$datei>;
 close $datei;
 
 sub get_version{
+
+my $ldt_version = "VERSION NICHT ERKANNT";
+
 for my $z (@zeilen){
 
-if (substr($z, 3, 4) == 92132){
-    my $ldt_version = "LDT 2";
+if (substr($z, 3, 4) == 9212){
+    $ldt_version = "LDT 2";
     return $ldt_version;
 }elsif(substr($z, 3, 4) == 0001){
-    my $ldt_version = "LDT 3";
-    return $ldt_version;
-}else{my $ldt_version = "VERSION NICHT ERKANNT";
+    $ldt_version = "LDT 3";
     return $ldt_version;}
     }
 }
