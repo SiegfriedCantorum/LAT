@@ -37,11 +37,13 @@ close $datei;
 sub get_version{
 for my $z (@zeilen){
 
-if (substr($z, 3, 4) == 9212){
+if (substr($z, 3, 4) == 92132){
     my $ldt_version = "LDT 2";
     return $ldt_version;
 }elsif(substr($z, 3, 4) == 0001){
     my $ldt_version = "LDT 3";
+    return $ldt_version;
+}else{my $ldt_version = "VERSION NICHT ERKANNT";
     return $ldt_version;}
     }
 }
@@ -50,7 +52,7 @@ my $ldt_version = &get_version;
 
 
 print "\n----------------------------------------------------------------";
-print "\n----------- Verarbeitung: $input_datei ($ldt_version) -----------\n";
+print "\n-- Verarbeitung: $input_datei ($ldt_version)\n";
 print "----------------------------------------------------------------\n\n";
 
 my $feldname = "";
