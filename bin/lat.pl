@@ -12,9 +12,7 @@ sub hilfe { #Ausgabe Hilfstext bei -h /--help
     print "\nVerwendung: lat [Optionen] Datei_1 [Datei_2 ...]\n\n";
     print "Analysetool zur Aufbereitung und inhaltlicher Pruefung von .ldt-Dateien.\n\n";
     print "Optionen:\n\n";
-    print "  -b, --bytecount       Ausgabe Bytecount Zeilen\n";
     print "  -c, --check           Inhaltliche Pruefung der Datei auf Vollständigkeit und Syntaxfehler\n";
-    print "  -d, --dynamic         EXPERIMENTELLES FEATURE! Dynamische Erkennung der LDT-Version einer Datei \n";
     print "  -f, --feld            Ausgabe Feldbedeutung\n";
     print "  -h, --help            Zeige diese Hilfsmeldung\n";
     print "  -o, --objektid        Ausgabe Objekt-Identifier (in LDT3)\n";
